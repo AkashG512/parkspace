@@ -1,0 +1,17 @@
+{
+  "name": "parkshare",
+  "version": "2.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:server": "npm run dev --workspace apps/server",
+    "dev:admin": "npm run dev --workspace apps/admin",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:admin\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
